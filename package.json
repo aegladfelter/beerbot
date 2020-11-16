@@ -1,0 +1,16 @@
+{
+  "name": "beer-bot",
+  "version": "1.0.0",
+  "description": "Discord bot for beer tracking",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Logan LaFollette & Austin Gladfelter",
+  "license": "ISC",
+  "dependencies": {
+    "@google-cloud/storage": "^5.5.0",
+    "discord.js": "^11.5.1",
+    "dotenv": "^8.2.0"
+  }
+}

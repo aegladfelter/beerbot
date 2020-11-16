@@ -1,0 +1,12 @@
+{
+    "beerlist": {
+        "tecate": {
+            "ratings": {
+                "user1": "10/10"
+            },
+            "descriptions": {
+                "user1": "It offered up a gentle aroma of sweet corn, followed by Champagne-like effervescence and a lightly bitter finish."
+            }
+        }
+    }
+}
