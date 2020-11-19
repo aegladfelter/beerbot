@@ -3,3 +3,5 @@ node_modules/
 
 # env files - keep these secret
 /.env
+
+.DS_Store
