@@ -1,7 +1,8 @@
-# Dependency directories
+# npm dependency directories
 node_modules/
 
 # env files - keep these secret
 /.env
 
+# other
 .DS_Store
