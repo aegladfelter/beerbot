@@ -1,0 +1,366 @@
+[
+ {
+   "Beer": "Pickle Sour",
+   "Score": 0
+ },
+ {
+   "Beer": "Clorox",
+   "Score": 1
+ },
+ {
+   "Beer": "Lysol",
+   "Score": 1.1
+ },
+ {
+   "Beer": "Coors Edge (NA)",
+   "Score": 1.3
+ },
+ {
+   "Beer": "Bud Light Platinum",
+   "Score": 2
+ },
+ {
+   "Beer": "Jack",
+   "Score": 2
+ },
+ {
+   "Beer": "Michelob Ultra Pure",
+   "Score": 3
+ },
+ {
+   "Beer": "Dos Equis",
+   "Score": 3.9
+ },
+ {
+   "Beer": "Brut IPA",
+   "Score": 4
+ },
+ {
+   "Beer": "Natural Light",
+   "Score": 4.1
+ },
+ {
+   "Beer": "Bud Light",
+   "Score": 4.3
+ },
+ {
+   "Beer": "Budweiser",
+   "Score": 4.7
+ },
+ {
+   "Beer": "Truly",
+   "Score": 5.5
+ },
+ {
+   "Beer": "Great White Beer",
+   "Score": 6
+ },
+ {
+   "Beer": "Stawski",
+   "Score": 6
+ },
+ {
+   "Beer": "Summer Solstice",
+   "Score": 6
+ },
+ {
+   "Beer": "NuCrepes Campfire",
+   "Score": 6
+ },
+ {
+   "Beer": "New England Style IPA",
+   "Score": 6
+ },
+ {
+   "Beer": "Britos Bulgarian Lager",
+   "Score": 6
+ },
+ {
+   "Beer": "King Cobra",
+   "Score": 6
+ },
+ {
+   "Beer": "Coca Cola",
+   "Score": 6
+ },
+ {
+   "Beer": "Red",
+   "Score": 6.5
+ },
+ {
+   "Beer": "Beerloa",
+   "Score": 6.5
+ },
+ {
+   "Beer": "Corona",
+   "Score": 6.5
+ },
+ {
+   "Beer": "Lagunitas Lucky 13",
+   "Score": 6.5
+ },
+ {
+   "Beer": "Great Lakes Christmas Ale",
+   "Score": 6.8
+ },
+ {
+   "Beer": "Session Boldly",
+   "Score": 7
+ },
+ {
+   "Beer": "7 Seas Brewing Company",
+   "Score": 7
+ },
+ {
+   "Beer": "Dank Detector",
+   "Score": 7
+ },
+ {
+   "Beer": "Lagunitas Day Time IPA",
+   "Score": 7
+ },
+ {
+   "Beer": "Hacker Pschorr Weissebier",
+   "Score": 7
+ },
+ {
+   "Beer": "Panda Party",
+   "Score": 7
+ },
+ {
+   "Beer": "Tacocat - Finch Beer Co",
+   "Score": 7
+ },
+ {
+   "Beer": "The Great Indoors",
+   "Score": 7
+ },
+ {
+   "Beer": "Busch Light",
+   "Score": 7
+ },
+ {
+   "Beer": "Iron Maiden Trooper Beer",
+   "Score": 7
+ },
+ {
+   "Beer": "Salmon Pants, Warpigs",
+   "Score": 7
+ },
+ {
+   "Beer": "Kolsch with Asian Pear",
+   "Score": 7
+ },
+ {
+   "Beer": "Extra Pale Ale 420",
+   "Score": 7
+ },
+ {
+   "Beer": "Pipeworks: Lizard Kings",
+   "Score": 7.5
+ },
+ {
+   "Beer": "Shortfuse El Suave",
+   "Score": 7.5
+ },
+ {
+   "Beer": "Noon Whistle",
+   "Score": 7.5
+ },
+ {
+   "Beer": "Strawberry Basil",
+   "Score": 7.5
+ },
+ {
+   "Beer": "Nigori Coconut",
+   "Score": 7.5
+ },
+ {
+   "Beer": "Pineapple Orange Double IPA",
+   "Score": 7.5
+ },
+ {
+   "Beer": "Giggly Blonde Very Light",
+   "Score": 7.5
+ },
+ {
+   "Beer": "Sleigh'r Winter Ale",
+   "Score": 7.5
+ },
+ {
+   "Beer": "Distihl Sour Series: Pina Colada Gose",
+   "Score": 7.8
+ },
+ {
+   "Beer": "Export Stout Raspberry Sour",
+   "Score": 7.9
+ },
+ {
+   "Beer": "Billy Frogg Local Beers",
+   "Score": 8
+ },
+ {
+   "Beer": "Sister of the Moon",
+   "Score": 8
+ },
+ {
+   "Beer": "Chocolate Shake",
+   "Score": 8
+ },
+ {
+   "Beer": "El Chavo: Habenero and Mango",
+   "Score": 8
+ },
+ {
+   "Beer": "Cloud Formations",
+   "Score": 8
+ },
+ {
+   "Beer": "Hopewell",
+   "Score": 8
+ },
+ {
+   "Beer": "First Lager",
+   "Score": 8
+ },
+ {
+   "Beer": "Floridaweiss",
+   "Score": 8
+ },
+ {
+   "Beer": "Saison, Forbidden Root",
+   "Score": 8
+ },
+ {
+   "Beer": "Free the IPL",
+   "Score": 8
+ },
+ {
+   "Beer": "Love Tap IPA",
+   "Score": 8
+ },
+ {
+   "Beer": "Corona Hard Seltzer",
+   "Score": 8
+ },
+ {
+   "Beer": "Export Stout Smooth",
+   "Score": 8
+ },
+ {
+   "Beer": "Hazy Memory ",
+   "Score": 8
+ },
+ {
+   "Beer": "Hanelei IPA",
+   "Score": 8
+ },
+ {
+   "Beer": "Japanese Old Fashioned",
+   "Score": 8
+ },
+ {
+   "Beer": "Great Coffee Ale, Pipeworks",
+   "Score": 8
+ },
+ {
+   "Beer": "Official",
+   "Score": 8
+ },
+ {
+   "Beer": "Giggly Blonde Blackberry IPA",
+   "Score": 8.2
+ },
+ {
+   "Beer": "Son of Juice: Maywood Brewing",
+   "Score": 8.3
+ },
+ {
+   "Beer": "Blood Orange IPA",
+   "Score": 8.5
+ },
+ {
+   "Beer": "Granville Island Honey Lager",
+   "Score": 8.5
+ },
+ {
+   "Beer": "Paper Umbrella",
+   "Score": 8.5
+ },
+ {
+   "Beer": "Fruited Zitrones",
+   "Score": 8.5
+ },
+ {
+   "Beer": "Black Raven Kitty Kat Blues",
+   "Score": 8.5
+ },
+ {
+   "Beer": "Pith ",
+   "Score": 8.5
+ },
+ {
+   "Beer": "Dead Guy Ale Rogue",
+   "Score": 8.67
+ },
+ {
+   "Beer": "Irish Car Bomb",
+   "Score": 9
+ },
+ {
+   "Beer": "Super Cluster ",
+   "Score": 9
+ },
+ {
+   "Beer": "Lagunitas Hazy Wonder",
+   "Score": 9
+ },
+ {
+   "Beer": "Fools Gold",
+   "Score": 9
+ },
+ {
+   "Beer": "Awakened One",
+   "Score": 9
+ },
+ {
+   "Beer": "American Double IPA",
+   "Score": 9
+ },
+ {
+   "Beer": "Lagunitas",
+   "Score": 9
+ },
+ {
+   "Beer": "Lavender Lemon Gose",
+   "Score": 9
+ },
+ {
+   "Beer": "Splash APA",
+   "Score": 10
+ },
+ {
+   "Beer": "Lagunitas Phase Change",
+   "Score": 10
+ },
+ {
+   "Beer": "Vizzy Hard Seltzer",
+   "Score": 10
+ },
+ {
+   "Beer": "Black Raspberry Sorbaze",
+   "Score": 10
+ },
+ {
+   "Beer": "Hendricks and Binny's",
+   "Score": 10
+ },
+ {
+   "Beer": "Wet Hop Hazy IPA",
+   "Score": 10
+ },
+ {
+   "Beer": "Members Mark ",
+   "Score": 10
+ }
+]
