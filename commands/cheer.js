@@ -59,6 +59,6 @@ async function setCheerCount(data, msg, userData) {
         msg.channel.send("Uh oh! - an error occurred, cheer could not be set.")
     } else {
         var suffixStr = data.cheerCount === 1 ? " cheer!" : " cheers!"
-        msg.channel.send(randomQuote + " - " + msg.author.toString() + " has " + data.cheerCount + suffixStr);
+        msg.channel.send(randomQuote + " - " + msg.mentions.members.first().user.toString() + " has " + data.cheerCount + suffixStr);
     }
 }
