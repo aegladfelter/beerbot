@@ -3,6 +3,7 @@ const Discord = require('discord.js');
 const client = new Discord.Client();
 const { promisify } = require('util');
 const readdir = promisify(require('fs').readdir);
+const firestoreutils = require('./firestoreutils');
 client.commands = new Map();
 const TOKEN = process.env.TOKEN;
 const PREFIX = process.env.PREFIX;
@@ -56,17 +57,22 @@ client.on('ready', () => {
 
 client.on('message', msg => {
     if (!msg.guild) return; // exit if the message does not have a guild
+    if (msg.author.username = "Beerform") {
+      firestoreutils.setBeerRatingFromForm(msg, db);
+    }
     if (msg.author.bot) return; // exit if the message author is a bot
     var userMention = msg.mentions.members.first();
     // remove the prefix and map each arg to an array
     const args = msg.content.slice(PREFIX.length).trim().split(/ +/g).map(Function.prototype.call, String.prototype.trim);
-    
     const command = args.shift().toLowerCase();
     const cmd = client.commands.get(command);
     if (!cmd) { // the message is not a command we know of
       // check for user mention functionality
       if (userMention) {
-        if (userMention.user.username === "beerbot" && msg.content.toLowerCase().includes("how do i make")) {
+        // for some reason sometimes when beerbot is mentioned the username that comes through is "Beerform"
+        // this is bandage fix for now - not sure why this is happening
+        var isBotMention = userMention.user.username === "beerbot" || userMention.user.username === "Beerform";
+        if (isBotMention && msg.content.toLowerCase().includes("how do i make")) {
           const howdoimakecmd = client.commands.get('howdoimake');
           howdoimakecmd.run(client, msg, args.slice(args.indexOf("make") + 1), db);
         } else if (args[0] === '🍻') { // there's at least one mentioned user and a cheers emoji

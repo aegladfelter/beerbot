@@ -3,6 +3,10 @@
   "version": "1.0.0",
   "description": "Discord bot for beer tracking",
   "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/aegladfelter/beerbot.git"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
