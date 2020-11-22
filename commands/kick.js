@@ -1,4 +1,4 @@
-module.exports.run = async (client, msg, args) => {
+module.exports.run = async (client, msg, args, db) => {
     if (msg.mentions.users.size) {
         const taggedUser = msg.mentions.users.first();
         msg.channel.send(`You wanted to kick: ${taggedUser.username}`);

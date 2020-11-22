@@ -1,4 +1,4 @@
-module.exports.run = async (client, msg, args) => {
+module.exports.run = async (client, msg, args, db) => {
     // (async () => {
     //     try {
     //         const snapshot = await db.collection('cheers').get();

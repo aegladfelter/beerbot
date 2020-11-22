@@ -57,18 +57,24 @@ client.on('ready', () => {
 client.on('message', msg => {
     if (!msg.guild) return; // exit if the message does not have a guild
     if (msg.author.bot) return; // exit if the message author is a bot
-
+    var userMention = msg.mentions.members.first();
     // remove the prefix and map each arg to an array
     const args = msg.content.slice(PREFIX.length).trim().split(/ +/g).map(Function.prototype.call, String.prototype.trim);
     
     const command = args.shift().toLowerCase();
     const cmd = client.commands.get(command);
     if (!cmd) { // the message is not a command we know of
-        if (msg.mentions.members.first() && args[0] === '🍻') { // there's at least one mentioned user and a cheers emoji
-            const func = client.commands.get("cheer");
-            func.run(client, msg, args, db);
-        }   
+      // check for user mention functionality
+      if (userMention) {
+        if (userMention.user.username === "beerbot" && msg.content.toLowerCase().includes("how do i make")) {
+          const howdoimakecmd = client.commands.get('howdoimake');
+          howdoimakecmd.run(client, msg, args.slice(args.indexOf("make") + 1), db);
+        } else if (args[0] === '🍻') { // there's at least one mentioned user and a cheers emoji
+          const cheercmd = client.commands.get("cheer");
+          cheercmd.run(client, msg, args, db);
+        }
+      }
     } else { // run the command 
-        cmd.run(client, msg, args); 
+        cmd.run(client, msg, args, db); 
     }
 });
