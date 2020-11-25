@@ -1,27 +1,41 @@
 const { CanvasRenderService } = require("chartjs-node-canvas");
 const fs = require("fs");
+const firestoreUtils = require("./../firestoreutils");
 
 // sample beer scores
 const getJson = fs.readFileSync(`sample-beer-scores.json`);
-const json = JSON.parse(getJson);
+// const json = JSON.parse(getJson);
 
 // get our labels and data
-const labels = json.map(function (item) {
-  return item.Beer;
-});
-const data = json.map(function (item) {
-  return item.Score;
-});
+// const labels = json.map(function (item) {
+//   return item.Beer;
+// });
+// const data = json.map(function (item) {
+//   return item.Score;
+// });
 
-const width = 2000; //px
-const height = 2000; //px
+const width = 600; //px
+const height = 600; //px
 const canvasRenderService = new CanvasRenderService(
   width,
   height,
-  (ChartJS) => {}
+  (ChartJS) => {
+    // what is in here
+    this;
+  }
 );
 
-module.exports.run = async (client, msg, args) => {
+module.exports.run = async (client, msg, args, db) => {
+  
+  var json = await firestoreUtils.getBeerRatings(db);
+
+  const labels = json.map(function (item) {
+    return item.Beer;
+  });
+  const data = json.map(function (item) {
+    return parseInt(item.Rating);
+  });
+
   const configuration = {
     type: "bar",
     data: {
@@ -40,6 +54,7 @@ module.exports.run = async (client, msg, args) => {
         display: true,
         text: "Moss Beers",
       },
+      backgroundColor: "#f00"
     },
   };
   const image = await canvasRenderService.renderToBuffer(configuration);

@@ -1,3 +1,12 @@
+var _ = require('underscore');
+
+var defaults = {
+  name: null,
+  rating: null,
+  company: null,
+  image: null,
+  description: null
+}
 // firestoreutils.js
 // ========
 // All of these fields should be available or nulld
@@ -28,13 +37,29 @@ module.exports = {
     var embeds = msg.embeds[0];
     if (embeds) {
       var fields = embeds.fields;
-      this.setBeerRating(msg, db, {
-        name: fields[0].value,
-        company: fields[1] ? fields[1].value : null,
-        rating: fields[2].value,
-        description: fields[3] ? fields[3].value : null,
-        image: fields[4] ? fields[4].value : null,
+      var beerData = {};
+
+      _.each(fields, function(field) {
+        beerData[field.name.toLowerCase()] = field.value;
       });
+
+      _.defaults(beerData, defaults);
+      
+      this.setBeerRating(msg, db, beerData);
     }
   },
+  getBeerRatings: async function (db) {
+    const beerCollection = await db.collection("ratings").get();
+    const beerCollectionData = beerCollection.docs.map(doc => doc.data()); 
+    // parse json
+    var ratings = [];
+    _.each(beerCollectionData, function(beer) {
+      ratings.push({
+        "Beer": beer.beerData.name,
+        "Rating": beer.beerData.rating
+      });
+    });
+
+    return ratings;
+  }
 };

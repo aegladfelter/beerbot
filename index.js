@@ -58,7 +58,12 @@ client.on("ready", () => {
 client.on("message", (msg) => {
   if (!msg.guild) return; // exit if the message does not have a guild
   if ((msg.author.username = "Beerform")) {
-    firestoreutils.setBeerRatingFromForm(msg, db);
+    try {
+      firestoreutils.setBeerRatingFromForm(msg, db);
+    } catch (e) {
+      // uh oh - most likely this was a problem parsing the response
+      msg.channel.send("Uh Oh - something went wrong. . .")
+    }
   }
   if (msg.author.bot) return; // exit if the message author is a bot
   var userMention = msg.mentions.members.first();
