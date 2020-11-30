@@ -22,6 +22,20 @@ const canvasRenderService = new CanvasRenderService(
   (ChartJS) => {
     // what is in here
     this;
+    // ChartJS.defaults.global.backgroundColor = "#3e95cd";
+    // ChartJS.defaults.global.defaultColor = "#3e95cd";
+    // ChartJS.plugins.register({
+    //   colorschemes: {
+    //     scheme: 'brewer.Paired12'
+    //   }
+    // });
+    // ChartJS.defaults.global.plugins.colorschemes = {};
+    // ChartJS.defaults.global.plugins.colorschemes.scheme = 'brewer.Paired12';
+    ChartJS.defaults.global.defaultFontStyle = 'Bold'
+    ChartJS.defaults.global.plugins = {};
+    ChartJS.defaults.global.plugins.datalabels = {};
+    ChartJS.defaults.global.plugins.datalabels.anchor = 'end';
+    ChartJS.defaults.global.plugins.datalabels.align = 'end';
   }
 );
 
@@ -53,8 +67,29 @@ module.exports.run = async (client, msg, args, db) => {
       title: {
         display: true,
         text: "Moss Beers",
+        fontColor: "white"
       },
-      backgroundColor: "#f00"
+      scales: {
+        yAxes: [{
+            ticks: {
+                beginAtZero: true,
+                fontColor: 'white',
+                fontSize: 14
+            },
+        }],
+      xAxes: [{
+            ticks: {
+                beginAtZero: true,
+                fontColor: 'white',
+                fontSize: 14
+            },
+        }]
+      },
+      gridLines: {
+        color: 'white',
+        display: true,
+        borderWidth: 100,
+      }
     },
   };
   const image = await canvasRenderService.renderToBuffer(configuration);
