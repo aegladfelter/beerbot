@@ -8,22 +8,6 @@ client.commands = new Map();
 const TOKEN = process.env.TOKEN;
 const PREFIX = process.env.PREFIX;
 
-// Cloud Storage SETUP
-// const { Storage } = require('@google-cloud/storage')
-// const storage = new Storage()
-// const bucket = storage.bucket('moss-gaming-beer')
-
-// // The function that returns a JSON string
-// const readJsonFromFile = async remoteFilePath => new Promise((resolve, reject) => {
-// let buf = ''
-// bucket.file(remoteFilePath)
-//     .createReadStream()
-//     .on('data', d => (buf += d))
-//     .on('end', () => resolve(buf))
-//     .on('error', e => reject(e))
-// });
-// END Cloud Storage SETUP
-
 // FIRESTORE SETUP
 const admin = require("firebase-admin");
 
