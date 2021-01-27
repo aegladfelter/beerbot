@@ -11,7 +11,8 @@ const PREFIX = process.env.PREFIX;
 // FIRESTORE SETUP
 const admin = require("firebase-admin");
 
-const serviceAccount = require("./../beerbot-295821-f6a45f63797f.json");
+// const serviceAccount = require("./../beerbot-295821-f6a45f63797f.json");
+const serviceAccount = require(process.env.GOOGLE_CREDENTIALS);
 
 admin.initializeApp({
   credential: admin.credential.cert(serviceAccount),
