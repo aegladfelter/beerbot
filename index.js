@@ -14,9 +14,9 @@ const admin = require("firebase-admin");
 
 // const serviceAccount = require("./../beerbot-295821-f6a45f63797f.json");
 
-console.info("Connecting to firebase. . . . credentials: " + process.env.GOOGLE_CREDENTIALS);
+console.info("Connecting to firebase. . . . credentials: " + process.env.GOOGLE_APPLICATION_CREDENTIALS);
 admin.initializeApp({
-  credential: admin.credential.cert(process.env.GOOGLE_CREDENTIALS),
+  credential: admin.credential.cert(process.env.GOOGLE_APPLICATION_CREDENTIALS),
 });
 
 const db = admin.firestore();
