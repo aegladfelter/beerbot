@@ -7,12 +7,14 @@ const firestoreutils = require("./firestoreutils");
 client.commands = new Map();
 const TOKEN = process.env.TOKEN;
 const PREFIX = process.env.PREFIX;
+console.info("Using prefix: " + PREFIX);
 
 // FIRESTORE SETUP
 const admin = require("firebase-admin");
 
 // const serviceAccount = require("./../beerbot-295821-f6a45f63797f.json");
 
+console.info("Connecting to firebase. . . . credentials: " + process.env.GOOGLE_CREDENTIALS);
 admin.initializeApp({
   credential: admin.credential.cert(process.env.GOOGLE_CREDENTIALS),
 });
@@ -20,6 +22,7 @@ admin.initializeApp({
 const db = admin.firestore();
 // END FIRESTORE SETUP
 
+console.info("Logging into discord with token. . .")
 client.login(TOKEN);
 
 client.on("ready", () => {
