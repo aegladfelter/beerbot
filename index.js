@@ -12,10 +12,9 @@ const PREFIX = process.env.PREFIX;
 const admin = require("firebase-admin");
 
 // const serviceAccount = require("./../beerbot-295821-f6a45f63797f.json");
-const serviceAccount = require(process.env.GOOGLE_CREDENTIALS);
 
 admin.initializeApp({
-  credential: admin.credential.cert(serviceAccount),
+  credential: admin.credential.cert(process.env.GOOGLE_CREDENTIALS),
 });
 
 const db = admin.firestore();
