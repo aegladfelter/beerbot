@@ -21,7 +21,6 @@
     "dotenv": "^8.2.0",
     "firebase-admin": "^9.4.1",
     "get-json": "^1.0.1",
-    "node-pre-gyp": "^0.11.0",
     "underscore": "^1.11.0"
   }
 }
