@@ -45,7 +45,7 @@ client.on("ready", () => {
 
 client.on("message", (msg) => {
   if (!msg.guild) return; // exit if the message does not have a guild
-  if ((msg.author.username = "Beerform")) {
+  if ((msg.author.username === "Beerform")) {
     try {
       firestoreutils.setBeerRatingFromForm(msg, db);
     } catch (e) {
