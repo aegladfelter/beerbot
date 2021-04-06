@@ -7,35 +7,23 @@ const firestoreutils = require("./firestoreutils");
 client.commands = new Map();
 const TOKEN = process.env.TOKEN;
 const PREFIX = process.env.PREFIX;
-
-// Cloud Storage SETUP
-// const { Storage } = require('@google-cloud/storage')
-// const storage = new Storage()
-// const bucket = storage.bucket('moss-gaming-beer')
-
-// // The function that returns a JSON string
-// const readJsonFromFile = async remoteFilePath => new Promise((resolve, reject) => {
-// let buf = ''
-// bucket.file(remoteFilePath)
-//     .createReadStream()
-//     .on('data', d => (buf += d))
-//     .on('end', () => resolve(buf))
-//     .on('error', e => reject(e))
-// });
-// END Cloud Storage SETUP
+console.info("Using prefix: " + PREFIX);
 
 // FIRESTORE SETUP
 const admin = require("firebase-admin");
 
-const serviceAccount = require("./../beerbot-295821-f6a45f63797f.json");
+// const serviceAccount = require("./../beerbot-295821-f6a45f63797f.json");
+const parsedCredentials = JSON.parse(process.env.GOOGLE_CREDENTIALS);
 
+console.info("Connecting to firebase. . . .");
 admin.initializeApp({
-  credential: admin.credential.cert(serviceAccount),
+  credential: admin.credential.cert(parsedCredentials),
 });
 
 const db = admin.firestore();
 // END FIRESTORE SETUP
 
+console.info("Logging into discord with token. . .")
 client.login(TOKEN);
 
 client.on("ready", () => {
@@ -57,7 +45,7 @@ client.on("ready", () => {
 
 client.on("message", (msg) => {
   if (!msg.guild) return; // exit if the message does not have a guild
-  if ((msg.author.username = "Beerform")) {
+  if ((msg.author.username === "Beerform")) {
     try {
       firestoreutils.setBeerRatingFromForm(msg, db);
     } catch (e) {
